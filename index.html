@@ -1,0 +1,892 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>InterviewAI - AI Mock Interview Platform</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span>AI</span> Interview
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#interview">Interview</a>
+        </nav>
+
+        <button class="nav-btn" onclick="startInterview()">
+            Start Interview
+        </button>
+
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                ✨ AI-Powered Interview Practice
+            </div>
+
+            <h1>
+                Practice Smarter.
+                <span>Interview Better.</span>
+            </h1>
+
+            <p>
+                Practice realistic interviews with AI-powered questions,
+                instant feedback, scoring and personalized improvement
+                suggestions.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="primary-btn" onclick="startInterview()">
+                    Start Mock Interview →
+                </button>
+
+                <button class="secondary-btn" onclick="scrollToSection('how-it-works')">
+                    How It Works
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="hero-card">
+
+            <div class="card-header">
+                <div>
+                    <small>AI Interview Session</small>
+                    <h3>Data Scientist</h3>
+                </div>
+
+                <span class="status">● Live</span>
+            </div>
+
+            <div class="question-box">
+
+                <span class="question-number">
+                    Question 1 of 5
+                </span>
+
+                <h3>
+                    What is the difference between
+                    supervised and unsupervised learning?
+                </h3>
+
+            </div>
+
+            <div class="score-preview">
+
+                <div>
+                    <small>AI Score</small>
+                    <strong>8.5/10</strong>
+                </div>
+
+                <div class="progress">
+                    <div></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROBLEM SECTION ================= -->
+
+    <section class="problem-section">
+
+        <div class="section-heading">
+
+            <span class="small-title">THE PROBLEM</span>
+
+            <h2>
+                Interviews are difficult
+                <span>without practice.</span>
+            </h2>
+
+            <p>
+                Students often struggle because they don't get enough
+                realistic interview practice and feedback.
+            </p>
+
+        </div>
+
+
+        <div class="problem-grid">
+
+            <div class="problem-card">
+
+                <div class="icon">🎤</div>
+
+                <h3>No Practice Opportunities</h3>
+
+                <p>
+                    Students rarely get access to realistic,
+                    structured interview simulations.
+                </p>
+
+            </div>
+
+
+            <div class="problem-card">
+
+                <div class="icon">👨‍🏫</div>
+
+                <h3>Limited Mentor Access</h3>
+
+                <p>
+                    Experienced professionals who can provide
+                    quality feedback are difficult to reach.
+                </p>
+
+            </div>
+
+
+            <div class="problem-card">
+
+                <div class="icon">😰</div>
+
+                <h3>Interview Anxiety</h3>
+
+                <p>
+                    Without preparation, anxiety can increase
+                    during the actual interview.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FEATURES ================= -->
+
+    <section id="features" class="features-section">
+
+        <div class="section-heading">
+
+            <span class="small-title">FEATURES</span>
+
+            <h2>
+                Everything you need to
+                <span>prepare better.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="features-grid">
+
+            <div class="feature-card">
+
+                <div class="feature-icon">👤</div>
+
+                <h3>User Profile</h3>
+
+                <p>
+                    Add your education, skills, experience level
+                    and target job role.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">💻</div>
+
+                <h3>Technical Interview</h3>
+
+                <p>
+                    Practice questions related to your technical
+                    skills and target role.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">🤝</div>
+
+                <h3>HR Interview</h3>
+
+                <p>
+                    Practice common HR and personality-based
+                    interview questions.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">🧠</div>
+
+                <h3>Behavioral Interview</h3>
+
+                <p>
+                    Practice questions about situations,
+                    experiences and decision-making.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">⚡</div>
+
+                <h3>Smart Evaluation</h3>
+
+                <p>
+                    Receive scores, feedback and suggestions
+                    after answering questions.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">📊</div>
+
+                <h3>Performance Report</h3>
+
+                <p>
+                    Understand your strengths, weaknesses
+                    and areas for improvement.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= HOW IT WORKS ================= -->
+
+    <section id="how-it-works" class="workflow-section">
+
+        <div class="section-heading">
+
+            <span class="small-title">HOW IT WORKS</span>
+
+            <h2>
+                Your interview preparation
+                <span>in 5 simple steps.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="workflow">
+
+            <div class="step">
+
+                <div class="step-number">01</div>
+
+                <h3>Create Profile</h3>
+
+                <p>
+                    Enter your education, skills and target role.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">02</div>
+
+                <h3>Select Interview</h3>
+
+                <p>
+                    Choose Technical, HR, Behavioral or Mixed.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">03</div>
+
+                <h3>Answer Questions</h3>
+
+                <p>
+                    Answer realistic interview questions.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">04</div>
+
+                <h3>Get Feedback</h3>
+
+                <p>
+                    Receive AI-style scoring and feedback.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">05</div>
+
+                <h3>View Report</h3>
+
+                <p>
+                    Analyze your performance and improve.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= INTERVIEW APP ================= -->
+
+    <section id="interview" class="interview-section">
+
+        <div class="interview-container">
+
+            <!-- PROFILE -->
+
+            <div id="profile-screen" class="interview-screen active">
+
+                <div class="screen-heading">
+
+                    <span class="small-title">STEP 1</span>
+
+                    <h2>Create Your Profile</h2>
+
+                    <p>
+                        Tell us about yourself so we can personalize
+                        your mock interview.
+                    </p>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>Full Name</label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter your name"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Target Role</label>
+
+                        <input
+                            type="text"
+                            id="role"
+                            placeholder="e.g. Data Scientist"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Experience Level</label>
+
+                        <select id="experience">
+
+                            <option value="">
+                                Select level
+                            </option>
+
+                            <option>Fresher</option>
+
+                            <option>Intermediate</option>
+
+                            <option>Experienced</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Skills</label>
+
+                        <input
+                            type="text"
+                            id="skills"
+                            placeholder="Python, SQL, ML"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <button class="primary-btn" onclick="saveProfile()">
+                    Continue →
+                </button>
+
+            </div>
+
+
+            <!-- INTERVIEW SELECTION -->
+
+            <div id="selection-screen" class="interview-screen">
+
+                <div class="screen-heading">
+
+                    <span class="small-title">STEP 2</span>
+
+                    <h2>Select Interview Type</h2>
+
+                    <p>
+                        Choose the type of interview you want to practice.
+                    </p>
+
+                </div>
+
+
+                <div class="interview-types">
+
+                    <div
+                        class="interview-type"
+                        onclick="selectInterview('Technical', this)"
+                    >
+
+                        <div class="type-icon">💻</div>
+
+                        <h3>Technical</h3>
+
+                        <p>
+                            Test your technical knowledge.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="interview-type"
+                        onclick="selectInterview('HR', this)"
+                    >
+
+                        <div class="type-icon">👔</div>
+
+                        <h3>HR</h3>
+
+                        <p>
+                            Practice common HR questions.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="interview-type"
+                        onclick="selectInterview('Behavioral', this)"
+                    >
+
+                        <div class="type-icon">🧠</div>
+
+                        <h3>Behavioral</h3>
+
+                        <p>
+                            Practice situational questions.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="interview-type"
+                        onclick="selectInterview('Mixed', this)"
+                    >
+
+                        <div class="type-icon">🎯</div>
+
+                        <h3>Mixed</h3>
+
+                        <p>
+                            Combination of interview types.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="primary-btn"
+                    onclick="beginInterview()"
+                >
+                    Begin Interview →
+                </button>
+
+            </div>
+
+
+            <!-- QUESTION SCREEN -->
+
+            <div id="question-screen" class="interview-screen">
+
+                <div class="interview-top">
+
+                    <div>
+
+                        <span id="candidate-name">
+                            Candidate
+                        </span>
+
+                        <h3 id="candidate-role">
+                            Interview
+                        </h3>
+
+                    </div>
+
+                    <span id="question-count">
+                        Question 1 / 5
+                    </span>
+
+                </div>
+
+
+                <div class="progress-bar">
+
+                    <div id="question-progress"></div>
+
+                </div>
+
+
+                <div class="question-card">
+
+                    <span class="small-title">
+                        INTERVIEW QUESTION
+                    </span>
+
+                    <h2 id="question-text">
+                        Question goes here
+                    </h2>
+
+                </div>
+
+
+                <div class="answer-area">
+
+                    <label>Your Answer</label>
+
+                    <textarea
+                        id="answer"
+                        rows="7"
+                        placeholder="Type your answer here..."
+                    ></textarea>
+
+                    <div class="answer-footer">
+
+                        <span id="char-count">
+                            0 characters
+                        </span>
+
+                        <button
+                            class="primary-btn"
+                            onclick="submitAnswer()"
+                        >
+                            Submit Answer →
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FEEDBACK -->
+
+                <div id="feedback-box" class="feedback-box">
+
+                    <div class="feedback-header">
+
+                        <div>
+
+                            <span class="small-title">
+                                AI FEEDBACK
+                            </span>
+
+                            <h3>Answer Evaluation</h3>
+
+                        </div>
+
+                        <div class="score-circle">
+
+                            <span id="answer-score">
+                                8
+                            </span>
+
+                            <small>/10</small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="feedback-content">
+
+                        <h4>Strengths</h4>
+
+                        <p id="strength">
+                            Your answer is conceptually correct.
+                        </p>
+
+
+                        <h4>Improvement</h4>
+
+                        <p id="improvement">
+                            Add a practical example to make your
+                            answer stronger.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="primary-btn"
+                        onclick="nextQuestion()"
+                    >
+                        Next Question →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- REPORT SCREEN -->
+
+            <div id="report-screen" class="interview-screen">
+
+                <div class="report-header">
+
+                    <span class="small-title">
+                        FINAL PERFORMANCE REPORT
+                    </span>
+
+                    <h2>Great Job, <span id="report-name"></span>!</h2>
+
+                    <p>
+                        Here is your mock interview performance.
+                    </p>
+
+                </div>
+
+
+                <div class="overall-score">
+
+                    <span>Overall Score</span>
+
+                    <strong id="overall-score">
+                        8.2
+                    </strong>
+
+                    <small>/10</small>
+
+                </div>
+
+
+                <div class="metrics">
+
+                    <div class="metric">
+
+                        <div class="metric-top">
+
+                            <span>Technical Accuracy</span>
+
+                            <strong>85%</strong>
+
+                        </div>
+
+                        <div class="metric-bar">
+                            <div style="width:85%"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="metric">
+
+                        <div class="metric-top">
+
+                            <span>Completeness</span>
+
+                            <strong>80%</strong>
+
+                        </div>
+
+                        <div class="metric-bar">
+                            <div style="width:80%"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="metric">
+
+                        <div class="metric-top">
+
+                            <span>Communication</span>
+
+                            <strong>82%</strong>
+
+                        </div>
+
+                        <div class="metric-bar">
+                            <div style="width:82%"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="metric">
+
+                        <div class="metric-top">
+
+                            <span>Problem Solving</span>
+
+                            <strong>78%</strong>
+
+                        </div>
+
+                        <div class="metric-bar">
+                            <div style="width:78%"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="report-grid">
+
+                    <div class="report-card">
+
+                        <h3>💪 Strengths</h3>
+
+                        <ul>
+
+                            <li>Good understanding of concepts</li>
+
+                            <li>Clear explanation</li>
+
+                            <li>Correct technical answers</li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="report-card">
+
+                        <h3>📈 Areas to Improve</h3>
+
+                        <ul>
+
+                            <li>Add more practical examples</li>
+
+                            <li>Improve answer structure</li>
+
+                            <li>Practice communication</li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <div class="recommendation">
+
+                    <h3>🤖 AI Recommendations</h3>
+
+                    <p>
+                        Practice more technical questions and use
+                        real-world examples when explaining concepts.
+                        Continue practicing to improve confidence
+                        and communication.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="primary-btn"
+                    onclick="restartInterview()"
+                >
+                    Retake Interview
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="logo">
+            <span>AI</span> Interview
+        </div>
+
+        <p>
+            AI-powered interview practice for students.
+        </p>
+
+        <p>
+            © 2026 InterviewAI. College Project.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
